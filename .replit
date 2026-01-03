@@ -1,5 +1,3 @@
-# IAN TECH Global WhatsApp Pairing Service
-# Configuration for Replit deployment
 
 run = "npm start"
 
