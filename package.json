@@ -1,0 +1,80 @@
+{
+  "name": "ian-tech-whatsapp-pairing",
+  "version": "3.0.0",
+  "description": "IAN TECH Global WhatsApp Pairing Code Generator - Auto-Activated",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "ian": "node server.js",
+    "tech": "pm2 start server.js --name 'ian-tech-pairing' --attach --max-memory-restart 490M",
+    "restart": "pm2 restart ian-tech-pairing",
+    "stop": "pm2 stop ian-tech-pairing",
+    "logs": "pm2 logs ian-tech-pairing",
+    "clean": "rm -rf auth_info pair_sessions node_modules package-lock.json",
+    "reset": "rm -rf auth_info pair_sessions && npm start",
+    "test": "echo \"IAN TECH Global WhatsApp Pairing Service v3.0.0\" && exit 0"
+  },
+  "keywords": [
+    "whatsapp",
+    "pairing",
+    "baileys",
+    "ian-tech",
+    "whatsapp-bot",
+    "pair-code",
+    "device-pairing",
+    "global",
+    "whatsapp-api",
+    "auto-activated"
+  ],
+  "author": "IAN TECH <+254723278526>",
+  "license": "PROPRIETARY",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ian-tech/whatsapp-pairing"
+  },
+  "bugs": {
+    "url": "https://github.com/ian-tech/whatsapp-pairing/issues",
+    "email": "contact@iantech.co.ke"
+  },
+  "homepage": "https://iantech.co.ke/whatsapp-pairing",
+  "contact": {
+    "name": "IAN TECH",
+    "phone": "+254723278526",
+    "email": "contact@iantech.co.ke",
+    "website": "https://iantech.co.ke"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.5.0",
+    "express": "^4.19.2",
+    "qrcode": "^1.5.3",
+    "crypto": "^1.0.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "pino": "^8.16.2",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.5",
+    "pm2": "^5.3.0",
+    "nodemon": "^3.0.1",
+    "morgan": "^1.10.0",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "libphonenumber-js": "^1.10.51",
+    "phone": "^3.1.41"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "config": {
+    "company": "IAN TECH",
+    "contact": "+254723278526",
+    "default_port": 5000,
+    "session_prefix": "IAN_TECH",
+    "code_length": 8,
+    "code_expiry": 10,
+    "logo_url": "https://files.catbox.moe/f7f4r1.jpg",
+    "auto_activated": true
+  }
+}
